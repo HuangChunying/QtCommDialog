@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>513</width>
+    <height>349</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <widget class="QWebEngineView" name="ganttChart" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>700</width>
+     <height>450</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>75</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>changevalue</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>0</y>
+     <width>75</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>changesize</string>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header location="global">qwebengineview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>on_changebtn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>47</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>on_changebtn()</slot>
+  <slot>onResizeEcharts()</slot>
+ </slots>
+</ui>
